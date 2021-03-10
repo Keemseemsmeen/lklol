@@ -1,0 +1,40 @@
+Language,English,German
+
+#include "\loki_lost_key\TeamStatusDialog\stringtable.csv"
+#include "\loki_lost_key\SPON\Core\stringtable.csv"
+#include "\loki_lost_key\SPON\Scuba\stringtable.csv"
+
+STR_SPON_RV_LEFT, "LEFT (%1%2)"
+STR_SPON_RV_RIGHT, "RIGHT (%1%2)"
+STR_SPON_RV_CENTRE, "REAR (%1%2)"
+
+STR_PXS_HINT,Click MAP to insert satellite coordinates
+STR_PXS_ACTION,Start SatView
+STR_PXS_BAG,SatCom terminal(pack)
+STR_PXS_STATUS_1,SatCom system is connected.
+STR_PXS_STATUS_2,SatCom system is disconnected.
+STR_PXS_OPERATOR,Operator (SatCom)
+
+
+STR_STRA_DEBUG,	"Debug Konzole",	"Debug console",
+STR_STRA_EXPRESSION,	"Command line:",	"Príkazový rádek:",
+STR_STRA_VARIABLE,	"Value check:",	"Kontrola hodnot:"
+STR_STRA_EXECUTE,	"Execute",	"Provést"
+STR_STRA_ONCE,	"Once",	"Jednou",
+STR_STRA_LOOP,	"Repeatedly",	"Opakovane",
+STR_STRA_PAUSED,	"Pause",	"Pauza",
+
+
+STR_INTRO_SHORT,get some!
+
+STR_INTRO_x0,HATE in a whole new way...
+STR_INTRO_x0a,because we can...
+
+STR_INTRO_x1,Just another day...
+STR_INTRO_x1a,in paradise...
+
+STR_INTRO_x2,Revenge is a dish...
+STR_INTRO_x2a,best served cold...
+
+STR_INTRO_x3,too many haters...
+STR_INTRO_x3a,time to earn freedom...

@@ -1,0 +1,9 @@
+
+
+trigger = createTrigger["EmptyDetector", position player];
+trigger setTriggerType "NONE";   
+trigger setTriggerActivation ["EAST", "PRESENT", true];
+trigger setTriggerArea [10000, 50, 45, false]; 
+trigger setTriggerStatements ["this", "hint "working"", "ok = false"] 
+
+{if (typeOf _x != "logic") then {{deleteVehicle _x} forEach crew _x;deleteVehicle _x};} forEach thisList

@@ -1,0 +1,6 @@
+
+Hint "Press the map to select the coords";
+
+
+
+onMapSingleClick "[_pos] exec ""\loki_lost_key\loki_scripts\arty\copperheadFF.sqs"""; Exit

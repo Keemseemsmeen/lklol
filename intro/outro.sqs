@@ -1,0 +1,63 @@
+ playsound "Mission_Outro";
+ 
+[] execVM "briefing\bye.sqf";
+~5
+
+
+titlecut [" ","BLACK IN",5]
+_camera = "camera" camCreate [(position player select 0), (position player select 1) + 0, 5];
+_camera cameraeffect ["internal", "back"]
+
+
+
+;=== 22:44:05
+
+_camera camPrepareTarget Player
+_camera camPreparePos [2,0,1]
+_camera camPrepareFOV 0.700
+_camera camCommitPrepared 0
+@camCommitted _camera
+
+
+;=== 22:44:05
+
+_camera camPrepareTarget Player
+_camera camPreparePos [2,0,1]
+_camera camPrepareFOV 0.700
+_camera camCommitPrepared 7.5
+@camCommitted _camera
+
+
+;=== 22:44:05
+
+_camera camPrepareTarget Player
+_camera camPreparePos [2,0,20]
+_camera camPrepareFOV 0.700
+_camera camCommitPrepared 7.5
+@camCommitted _camera
+
+
+
+;=== 22:44:05
+
+_camera camPrepareTarget Player
+_camera camPreparePos  [20,50,200]
+_camera camPrepareFOV 0.700
+_camera camCommitPrepared 15
+@camCommitted _camera
+
+_camera camPrepareTarget Player
+_camera camPreparePos  [20,50,2000]
+_camera camPrepareFOV 0.700
+_camera camCommitPrepared 15
+@camCommitted _camera
+
+~7
+
+player cameraeffect ["terminate","back"];
+camDestroy _camera
+
+titleCut [" ","Plain Down",5]
+
+
+endMission "END1";

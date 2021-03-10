@@ -1,0 +1,47 @@
+_pos = _this select 0
+onMapSingleClick "";
+
+
+
+HINT format ["5 seconds until impact..."]
+~5
+_rounds = 0
+
+#art
+busy = true
+_shell = "Sh_122_HE" createvehicle [0,0]
+_shell setpos [((_pos select 0) + random 30),((_pos select 1) + random 15), 400 + random 0 ]
+~0.05
+_shell = "Sh_122_HE" createvehicle [0,0]
+_shell setpos [((_pos select 0) + random 30),((_pos select 1) - random 15), 400 + random 0 ]
+~0.04
+_shell = "Sh_122_HE" createvehicle [0,0]
+_shell setpos [((_pos select 0) - random 30),((_pos select 1) + random 20), 400 + random 0 ]
+~0.04
+_shell = "Sh_122_HE" createvehicle [0,0]
+_shell setpos [((_pos select 0) + random 30),((_pos select 1) - random 20), 400 + random 0 ]
+~0.03
+_shell = "Sh_122_HE" createvehicle [0,0]
+_shell setpos [((_pos select 0) - random 30),((_pos select 1) + random 20), 400 + random 0 ]
+~0.02
+_shell = "Sh_122_HE" createvehicle [0,0]
+_shell setpos [((_pos select 0) - random 30),((_pos select 1) - random 20), 400 + random 0 ]
+~0.02
+_shell = "Sh_122_HE" createvehicle [0,0]
+_shell setpos [((_pos select 0) + random 30),((_pos select 1) - random 20), 400 + random 0 ]
+~0.04
+_shell = "Sh_122_HE" createvehicle [0,0]
+_shell setpos [((_pos select 0) - random 30),((_pos select 1) + random 20), 400 + random 0 ]
+~0.03
+_shell = "Sh_122_HE" createvehicle [0,0]
+_shell setpos [((_pos select 0) - random 30),((_pos select 1) - random 20), 400 + random 0 ]
+
+~1
+_rounds = _rounds + 1
+?(_rounds > 1) : goto "end"
+
+goto "art"
+
+#end
+
+busy = false

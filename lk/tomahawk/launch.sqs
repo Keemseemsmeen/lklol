@@ -1,0 +1,28 @@
+
+
+th = false;
+nul = [player] execVM "\loki_lost_key\lk\menu\close_menu.sqf";
+
+Launch = "HeliHEmpty" createVehicle (position player);
+CMTarget = "HeliHEmpty" createVehicle (position Launch);
+destination = createMarker ["destination", position Launch];
+
+
+setfire=true;
+titleText ["Click on the map to designate target-area","plain down"];
+onMapSingleClick "CMTarget setPos _pos; setfire=false";
+@!setfire;
+"destination" setmarkerpos getPos CMTarget;
+
+onMapSingleClick "";
+titleText ["", "plain down"];
+destination setMarkerType "Destroy";
+destination setMarkerText "Tomahawk Strike";
+destination setMarkerColor "ColorRed";
+
+
+~10
+
+[] exec "\loki_lost_key\lk\tomahawk\detonation.sqs";
+
+exit

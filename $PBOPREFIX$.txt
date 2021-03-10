@@ -1,0 +1,5 @@
+﻿///<'loki_lost_key.pbo' properties via Mikero's dos tools, dll version 7.16>///
+prefix=loki_lost_key
+//Pbo Type is: Arma Mission Addon
+//Sha: 'B1512803D2DE94741C3622328AD174B122280F26'
+//////</properties>//////

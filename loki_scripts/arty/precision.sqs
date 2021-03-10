@@ -1,0 +1,4 @@
+
+
+Hint "Click on the map to set the coords";
+onMapSingleClick "[_pos] exec ""\loki_lost_key\loki_scripts\arty\precisionFF.sqs""";

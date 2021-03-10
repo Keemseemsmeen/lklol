@@ -1,0 +1,72 @@
+
+_path = "\ca\air2\cruisemissile\"
+_pathS = _path + "data\scripts\"
+
+_dropPosition = getpos CMTarget;
+"destination" setmarkerpos getpos CMTarget;
+_cruise = createVehicle ["Chukar",_dropPosition,[], 0, "FLY"];
+_cruise setvectordir [ 0.1,- 1,+ 0.5];
+_cruise setPos [(getPos _cruise select 0),(getPos _cruise select 1),900] ;
+_cruise setVelocity [0,2,0] ;
+_cruise flyinHeight 570;
+_cruise setSpeedMode "FULL";
+~0.5 
+_dropPosX = _dropPosition select 0;
+_dropPosY = _dropPosition select 1;
+_dropPosZ = _dropPosition select 2;
+
+_droppos1 = [_dropPosX + 4, _dropPosY + 4, _dropPosZ];
+_droppos2 = [_dropPosX + 8, _dropPosY + 8, _dropPosZ];
+_droppos3 = [_dropPosX + 12, _dropPosY + 12, _dropPosZ];    
+_droppos4 = [_dropPosX - 4, _dropPosY - 4, _dropPosZ];    
+_droppos5 = [_dropPosX - 8, _dropPosY - 8, _dropPosZ];    
+_droppos6 = [_dropPosX - 12, _dropPosY - 12, _dropPosZ];    
+_droppos7 = [_dropPosX + 4, _dropPosY - 4, _dropPosZ];
+_droppos8 = [_dropPosX + 16, _dropPosY + 16, _dropPosZ];
+_droppos9 = [_dropPosX - 16, _dropPosY - 16, _dropPosZ];
+_droppos10 = [_dropPosX - 16, _dropPosY + 16, _dropPosZ];
+_droppos11 = [_dropPosX + 16, _dropPosY - 16, _dropPosZ];
+
+
+_planespawnpos = [_dropPosX , _dropPosY , _dropPosZ + 900];
+_misFlare = createVehicle ["cruiseMissileFlare1",_planespawnpos,[], 0, "NONE"];
+_misFlare inflame true;
+_cruise setVariable ["cruisemissile_level", false];
+[_cruise, _misFlare] execVM (_pathS + "cruisemissileflare.sqf");
+_cruise setObjectTexture [0, _path + "data\exhaust_flame_ca"];
+[_cruise] execVM (_pathS + "exhaust1.sqf");
+~7
+
+_cruise say "incoming";
+
+#Check
+?!(alive _cruise) : goto "Detonation";
+goto "Check";
+
+
+#Detonation
+det1 = "BO_GBU12_LGB" createvehicle [(getpos CMTarget select 0),(getpos CMTarget select 1), 0];
+det2 =  createvehicle ["BO_GBU12_LGB",_droppos1,[], 0, "None"];
+det3 =  createvehicle ["BO_GBU12_LGB",_droppos2,[], 0, "None"];   
+det4 =  createvehicle ["BO_GBU12_LGB",_droppos3,[], 0, "None"];    
+det5 =  createvehicle ["BO_GBU12_LGB",_droppos4,[], 0, "None"];  
+det6 =  createvehicle ["BO_GBU12_LGB",_droppos5,[], 0, "None"];
+det7 =  createvehicle ["BO_GBU12_LGB",_droppos6,[], 0, "None"];
+det8 =  createvehicle ["BO_GBU12_LGB",_droppos7,[], 0, "None"];
+det9 =  createvehicle ["BO_GBU12_LGB",_droppos8,[], 0, "None"];
+det10 =  createvehicle ["BO_GBU12_LGB",_droppos9,[], 0, "None"];
+det11 =  createvehicle ["BO_GBU12_LGB",_droppos10,[], 0, "None"];
+det12 = "BO_GBU12_LGB" createvehicle [( getpos CMTarget select 0),(getpos CMTarget select 1), 5];
+
+if (player distance CMTarget < 2000) then {_cruise say "nblast"};
+deletevehicle _cruise;
+deletemarker "destination";
+deletevehicle Launch
+deletevehicle CMTarget;
+
+~100
+
+th = true;
+hint "Tomahawk is available again"
+
+exit

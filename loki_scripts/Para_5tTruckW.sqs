@@ -1,0 +1,13 @@
+if (!isServer) exitWith{};
+_num_chutes = 1
+_radius = 15
+_i = 0
+_delta = 360 / _num_chutes
+#create_formation
+_pos = [(getPos (vehicle player) select 0)+sin(_delta * _i)*_radius,(getPos (vehicle player) select 1)+cos(_delta * _i)*_radius,getPos (vehicle player) select 2]
+chute = createVehicle ["ParachuteWest", _pos, [], 0, "FLY"];
+~0.1
+
+veh = createVehicle ["Truck5tMG", position player, [], 10, "veh moveindriver chute"];
+_i = _i + 1
+?_i < _num_chutes: goto "create_formation"

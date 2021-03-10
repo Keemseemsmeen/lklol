@@ -1,0 +1,7 @@
+STR_SPON_SCUBA_PUT_SATCHEL, "Put Underwater Satchel Charge (%1 left)"
+
+STR_SPON_SCUBA_TOUCH_OFF_SATCHEL, "Touch Off %1 Underwater Satchel Charge"
+STR_SPON_SCUBA_TOUCH_OFF_SATCHEL_MULTI, "Touch Off %1 Underwater Satchel Charges"
+
+STR_SPON_SCUBA_LIGHT_ON, "Turn On Flashlight"
+STR_SPON_SCUBA_LIGHT_OFF, "Turn Off Flashlight"

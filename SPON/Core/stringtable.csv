@@ -1,0 +1,31 @@
+// LANGUAGE, "English"
+// Should be #included by the stringtable.csv in the main mission folder
+
+// Debug log
+STR_SPON_CORE_DEBUG_SERVER_TITLE, "Server Log"
+STR_SPON_CORE_DEBUG_CLIENT_TITLE, "Client Log"
+
+STR_SPON_DEBUG_LOG_ACTION, "Debug Log"
+
+STR_SPON_DEBUG_AUTO_UPDATE, "Auto-update"
+STR_SPON_DEBUG_OFF, "Off"
+STR_SPON_DEBUG_ON, "On"
+
+// Error dialog.
+STR_SPON_CORE_ERROR_DEFAULT_TITLE, "Error!"
+
+// Error and Debug log
+STR_SPON_CORE_CLOSE_BUTTON, "Close"
+
+// Errors
+STR_SPON_CORE_BAD_ARMA_VERSION, "SPON Core requires ArmA %1 or higher"
+STR_SPON_CORE_STARTED_LATE, "SPON Core must be run at the very start of the mission"
+STR_SPON_CORE_BAD_DEBUG_PARAM, "Bad parameter for debug mode"
+STR_SPON_CORE_FAILED_OPEN_ERROR_DIALOG, "Unable to open SPON Core Error dialog"
+
+// Versioning
+STR_SPON_CORE_REQUIRED_VERSION_OLD, "%1 %2 is currently running (%3), but it is older than the one required (%4)"
+STR_SPON_CORE_REQUIRED_VERSION_MISSING, "%1 %2 is not currently running. %3 is required"
+STR_SPON_CORE_REGISTERED_OLDER_VERSION, "%1 %2 has already been started with an earlier version (%3), but as that is older than %4, there could be compatibility issues)"
+
+

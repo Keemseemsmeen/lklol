@@ -1,0 +1,5 @@
+while {alive player} do {
+skiptime 0.001;
+
+sleep 0.1;
+};

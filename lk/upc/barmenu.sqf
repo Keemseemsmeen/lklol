@@ -1,0 +1,1 @@
+if barbuy then {barac1 = barrac addAction ["Buy Infantry - 1500 $", "\loki_lost_key\lk\upc\barrack.sqf"]};
